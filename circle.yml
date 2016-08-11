@@ -1,0 +1,18 @@
+## Customize the test machine
+machine:
+  environment:
+    APP_ENV: test
+
+  ruby:
+    version:
+      2.3.0
+
+## Customize dependencies
+dependencies:
+  pre:
+    - gem install rake nokogiri github-markup
+
+## Customize test commands
+test:
+  override:
+    - rake test

@@ -53,8 +53,8 @@ Now you're up and running!  You can modify the flow to add functionality like ca
 
 ### Explanation
 
-**AT&T Flow**
-<br/>
+#### AT&T Flow
+
 ![alt text](../images/cellular-iot-button/ButtonsFlow.jpg "Buttons Flow")
 <br/>In Flow, data *flows* left to right.  The inputs are on the far left and the outputs on the far right.  In between are various nodes used to normalize data, perform calculations, or implement business rules.  Each node passes along its output using the *msg* object and the *msg.payload* property.
 
@@ -64,8 +64,14 @@ The function middle nodes affect the payload in various ways in order to communi
 
 The output nodes correspond with whatever input method was used.  For every request, a response must be issued back to the device so it knows the request was completed and successful in sending data.
 
-**ARM mbed C code**
-<br/>The main components of this code are: 1. using interrupts to run code when the buttons are pressed and 2. send the data to Flow, both in main.cpp.  It uses the base code written by Avnet for the [Avnet_ATT_Cellular_IOT Quick Start program](https://developer.mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT/), which in turn is taking care of the AT commands sent to the modem for you.
+#### ARM mbed C code
+
+The main components of this code are: 
+
+1. using interrupts to run code when the buttons are pressed, and
+2. send the data to Flow, both in main.cpp.  
+
+It uses the base code written by Avnet for the [Avnet_ATT_Cellular_IOT Quick Start program](https://developer.mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT/), which in turn is taking care of the AT commands sent to the modem for you.
 
 ```
 // interrupts for buttons
@@ -132,6 +138,6 @@ If you're having trouble it may help you to connect to the serial output.  Use a
 <br/>![alt text](../images/cellular-iot-button/CoolTerm.jpg "CoolTerm")
 * [PC USB serial driver](https://developer.mbed.org/handbook/Windows-serial-configuration)
 
-Make sure to check your flow endpoints for the correct server name and port.  Most people forget to change the server name.  Also make sure the URL components are defined in the correct variables and not combined into one. Check that your Flow is deployed and not in *Offline* mode.
+Make sure to check your Flow endpoints for the correct server name and port.  Most people forget to change the server name.  Also make sure the URL components are defined in the correct variables and not combined into one. Check that your Flow is deployed and not in *Offline* mode.
 
 The modem module requires a lot of power.  The USB plug included with the kit provides ***5V-2.4A*** and you need at least that much.  If you're seeing ```modem initialization failure``` the modem is probably not getting enough power.

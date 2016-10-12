@@ -1,9 +1,9 @@
 
-# Extending the Starter Kit Project With Additional Sensors
+# Extending the Starter Kit Project With The Silicon Labs PMOD Sensor
 
 |   Author   | Created At  | Updated On  |
 | ---------- | ----------- | ----------- |
-| johnwargo  | 2016-10-11  |             |
+| johnwargo  | 2016-10-11  | 2016-10-12  |
 
 ------
 
@@ -14,7 +14,7 @@ The [sample project for the AT&T IoT Starter Kit](https://starterkit.att.com/qui
 + X, Y and Z-axis readings from the FXOS8700CQ 6-axis sensor (accelerometer and magnetometer) on the FRDM-K64F board.
 + Temperature and humidity values from the HTS221 sensor on the cellular shield.
 
-The starter kit project, however, was coded to accept input from a variety of sensors. In this tutorial, you'll learn how to connect an additional sensor to the starter kit's cellular shield and modify the project's firmware to capture data from the sensor and sent it to M2X for storage and display. We'll use a Silicon Labs PMOD Sensor Auxiliary Board to capture proximity, ambient & infrared light and UV index for transmission to M2X.
+The starter kit project, however, was coded to accept input from a variety of sensors. In this tutorial, you'll learn how to connect the Silicon Labs PMOD Sensor Auxiliary Board to the starter kit's cellular shield and modify the project's firmware to capture data from the sensor and sent it to M2X for storage and display. The sensor captures proximity, ambient & infrared light and UV index for transmission to M2X.
 
 **Note:** This tutorial assumes you've already completed the [AT&T IoT Starter Kit tutorial](https://starterkit.att.com/quickstart) project and have operational AT&T Flow, AT&T M2X and mbed Developer accounts with the project code loaded. If you haven't worked through that project, start there and return here once you have it running. 
  

@@ -30,9 +30,16 @@ For this tutorial, you'll complete the following steps:
 
 The [Silicon Labs PMOD Sensor Auxiliary Board](http://www.silabs.com/products/sensors/pages/sensor-pmod.aspx) uses the Si7020 humidity and temperature sensor plus the Si1145 optical sensor that includes the following sensors:
 
-+ Integrated infrared proximity detector
-+ Integrated ambient light sensor
-+ Integrated UV index sensor   
++ Proximity detection adjustable from under 1 cm to over 50 cm
++ Ambient light lux measurements with an IR correction algorithm
++ UV index sensor
+
+The project's application code reads the sensor and scales them as needed using the following scale:
+
++ value < 22000	: The object is far away
++ 22000 ≤ value < 24000  : The object is in the vicinity of the sensor
++ 24000 ≤ value < 30000  : The object is near the sensor
++ value ≥ 30000	: The object is very near the sensor
 
 The following figure shows a close-up of the board.
  

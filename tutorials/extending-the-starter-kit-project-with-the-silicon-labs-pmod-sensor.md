@@ -43,7 +43,7 @@ The project's application code reads the sensor and scales them as needed using 
 
 The following figure shows a close-up of the board.
  
-![alt text](../images/extending-starter-kit-project-with-additional-sensors/figure-01.png "Silicon Labs PMOD Sensor Auxiliary Board")
+![alt text](../images/extending-the-starter-kit-project-with-the-silicon-labs-pmod-sensor/figure-01.png "Silicon Labs PMOD Sensor Auxiliary Board")
 
 **Note:** *The board includes temperature and humidity sensors, but we won't be using them in this tutorial as they're redundant with the HTS221 sensor on the WNC-Shield card.*
 
@@ -58,7 +58,7 @@ The pinouts on the Si1145 do not align with the cellular shield's PMOD connector
  
 The following figure shows the completed connection between the FRDM-K64F and the Silicon Labs PMOD Sensor Auxiliary Board  
 
-![alt text](../images/extending-starter-kit-project-with-additional-sensors/figure-02.png "A completed connection between the FRDM-K64F and the Silicon Labs PMOD Sensor Auxiliary Board")
+![alt text](../images/extending-the-starter-kit-project-with-the-silicon-labs-pmod-sensor/figure-02.png "A completed connection between the FRDM-K64F and the Silicon Labs PMOD Sensor Auxiliary Board")
 
 #### FRDM-K64F Software Modifications
 
@@ -66,7 +66,7 @@ With the boards connected, now it's time to tweak the project firmware (the cust
 
 Open the `config_me.h` file shown in the following figure.
 
-![alt text](../images/extending-starter-kit-project-with-additional-sensors/figure-03.png "mbed Development Environment")  
+![alt text](../images/extending-the-starter-kit-project-with-the-silicon-labs-pmod-sensor/figure-03.png "mbed Development Environment")  
 
 The application project uses constants to define different sensor configurations; you can see the constants in the code sample below:
  

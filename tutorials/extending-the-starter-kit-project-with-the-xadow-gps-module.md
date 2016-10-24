@@ -144,7 +144,7 @@ With the boards connected, now it's time to tweak the project firmware (the cust
 
 In the mbed IDE, open the `config_me.h` file shown in the following figure:
 
-![alt text](../images/extending-starter-kit-project-with-additional-sensors/figure-10.png "mbed Development Environment")  
+![alt text](../images/extending-the-starter-kit-project-with-the-xadow-gps-module/figure-10.png "mbed Development Environment")  
 
 The application project uses constants to define the supported sensor configurations; you can see the constants in the code sample below:
  
@@ -185,7 +185,7 @@ with `iSensorsToReport` set to `TEMP_HUMIDITY_ACCELEROMETER_GPS`, the following 
 
 You can see an example of the debug message in the following figure:
 
-![alt text](../images/extending-starter-kit-project-with-additional-sensors/figure-11.png "AT&T Flow application debug message")  
+![alt text](../images/extending-the-starter-kit-project-with-the-xadow-gps-module/figure-11.png "AT&T Flow application debug message")  
 
 #### Viewing the Results in AT&T M2X
 

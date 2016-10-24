@@ -200,7 +200,7 @@ Developer’s Guide to Creating the Flow Application.’
 
 In many simple M2X projects, IoT devices collect data using either built-in or
 connected sensors then uploads the recorded data to M2X as shown in Figure
-11. Typically, you’ll code the data collection application on the IoT device and
+6. Typically, you’ll code the data collection application on the IoT device and
 leverage the M2X APIs in the device application to send data to the cloud.
 
 ![Figure 6 – Sending Data to AT&T M2X](../images/starter-kit-guide/QuickStart11.png)  

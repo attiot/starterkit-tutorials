@@ -41,7 +41,7 @@
 
 Assembling the ISK is easy, simply mount the cellular shield onto the
 NXT FRDM-K64F Development Board, attach the antennas then apply
-power. Figure 6 shows the development and cellular shield boards ready
+power. Figure 1 shows the development and cellular shield boards ready
 to connect. As you can see from the figure, the Arduino pin layout is
 designed so that the boards can only align in one orientation. In the lower
 portion of the figure, notice that the development board has two rows of
@@ -51,8 +51,8 @@ When mounting the cellular shield on the development board, the
 pins from the cellular shield will plug into the outside sockets on the
 development board.
 
-![Figure 6 – Development Board (bottom) and Cellular Shield (top)](../images/starter-kit-guide/QuickStart06.jpg)  
-_Figure 6 – Development Board (bottom) and
+![Figure 1 – Development Board (bottom) and Cellular Shield (top)](../images/starter-kit-guide/QuickStart06.jpg)  
+_Figure 1 – Development Board (bottom) and
 Cellular Shield (top)_
 
 Place the cellular shield on the development board, aligning the pins on
@@ -65,27 +65,27 @@ _**Note: When you’re finished, there will be a slight gap between the cellular
 development board sockets; do not expect the board to be flush with the sockets on the
 development board.**_  
 
-![Figure 7 – Connecting the Development Board and Cellular Shield](../images/starter-kit-guide/QuickStart07.jpg)  
-_Figure 7 – Connecting the Development Board and Cellular Shield_
+![Figure 2 – Connecting the Development Board and Cellular Shield](../images/starter-kit-guide/QuickStart07.jpg)  
+_Figure 2 – Connecting the Development Board and Cellular Shield_
 
-Attach the cellular antennas (Figure 8) to the Cellular Shield using
-the metal connectors shown in the lower-left corner of Figure 7. The
+Attach the cellular antennas (Figure 3) to the Cellular Shield using
+the metal connectors shown in the lower-left corner of Figure 2. The
 connection must be tight, so there’s good connectivity between the
 board and the antenna, but not too tight as you might damage the board
 or the connector if you tighten it too much.  
 
-![Figure 8 – ISK Cellular Antennas](../images/starter-kit-guide/QuickStart08.jpg)  
-_Figure 8 – ISK Cellular Antennas_  
+![Figure 3 – ISK Cellular Antennas](../images/starter-kit-guide/QuickStart08.jpg)  
+_Figure 3 – ISK Cellular Antennas_  
 
 The ISK comes with two micro-USB cables and a power supply. Connect a
 USB cable to the micro-USB connector labeled 5V DC on the lower-right
-corner of the cellular shield board shown in Figure 9. Connect the other
+corner of the cellular shield board shown in Figure 4. Connect the other
 end of the cable to the power supply as shown in the figure. Due to the pin
 configuration of the boards, power supplied to the cellular shield will also
 power the development board.  
 
-![Figure 9 – Completed Assembly](../images/starter-kit-guide/QuickStart09.jpg)  
-_Figure 9 – Completed Assembly_  
+![Figure 4 – Completed Assembly](../images/starter-kit-guide/QuickStart09.jpg)  
+_Figure 4 – Completed Assembly_  
 
 _**Note: The cellular shield has specific voltage requirements, it requires 5V at 2.4A. USB
 ports and cell phone chargers provide the necessary 5V, but may not provide the required
@@ -96,12 +96,12 @@ The other USB cable is used to connect the development board to a PC in
 order to download firmware updates or custom applications to the board.
 Connect the USB cable to the development board using the Micro-USB
 connector on the lower-left corner of the development board shown in
-Figure 9. Use the connector to the left of the Ethernet port shown in the
+Figure 4. Use the connector to the left of the Ethernet port shown in the
 figure.  
 
 Finally, activate the SIM using the instructions provided in [Jasper Account (SIM Card Registration)](#menu9 "Jasper Account (SIM Card Registration)") then insert the SIM into the cellular shield. The socket for the
 SIM is on the cellular shield, right above the development board’s Ethernet
-connector shown in Figure 9. Insert the SIM with its metal connectors
+connector shown in Figure 4. Insert the SIM with its metal connectors
 facing down toward the cellular shield and the end with the cut-off corner
 into the socket first. The SIM socket will hold the SIM in place, so you must
 push the SIM all the way into the socket until it clicks before releasing it.
@@ -133,8 +133,8 @@ Developers use M2X to organize millions of connected devices, gather data in
 real-time, and translate collected data into meaningful information for quick
 decisions, automated actions, and strategic analysis.
 
-![Figure 10 – M2X Feature Summary & Pricing](../images/starter-kit-guide/QuickStart10.png)  
-_Figure 10 – M2X Feature Summary & Pricing_  
+![Figure 5 – M2X Feature Summary & Pricing](../images/starter-kit-guide/QuickStart10.png)  
+_Figure 5 – M2X Feature Summary & Pricing_  
 
 The AT&T M2X developer tier is free to use for a maximum of 10 devices and
 100,000 data points written to the store. You can learn more about AT&T M2X at
@@ -200,11 +200,11 @@ Developer’s Guide to Creating the Flow Application.’
 
 In many simple M2X projects, IoT devices collect data using either built-in or
 connected sensors then uploads the recorded data to M2X as shown in Figure
-11. Typically, you’ll code the data collection application on the IoT device and
+6. Typically, you’ll code the data collection application on the IoT device and
 leverage the M2X APIs in the device application to send data to the cloud.
 
-![Figure 11 – Sending Data to AT&T M2X](../images/starter-kit-guide/QuickStart11.png)  
-_Figure 11 – Sending Data to AT&T M2X_  
+![Figure 6 – Sending Data to AT&T M2X](../images/starter-kit-guide/QuickStart11.png)  
+_Figure 6 – Sending Data to AT&T M2X_  
 
 More sophisticated IoT applications will use the capabilities of AT&T Flow to
 process the collected data in some way; make decisions (in the cloud instead
@@ -221,8 +221,8 @@ to create the necessary project definition in M2X and prepare a data store.
 Additionally, the Flow project uses triggers to enable the IoT device to
 communicate status to the Flow application.
 
-![Figure 12 – Sending Data to AT&T M2X Through AT&T Flow](../images/starter-kit-guide/QuickStart12.png)  
-_Figure 12 – Sending Data to AT&T M2X Through AT&T Flow_  
+![Figure 7 – Sending Data to AT&T M2X Through AT&T Flow](../images/starter-kit-guide/QuickStart12.png)  
+_Figure 7 – Sending Data to AT&T M2X Through AT&T Flow_  
 
 For common M2X and Flow applications, you’ll setup your project using the
 following steps:
@@ -255,22 +255,22 @@ for each.
 The core capabilities for this project are provided through AT&T IoT Services;
 you’ll create an account there and have access to both M2X and Flow. Sign
 up for an AT&T IoT Services account by pointing your browser of choice to
-m2x.att.com/signup. as shown in Figure 13. Click the SIGN UP button on the
-page’s upper-right corner. On the page that appears (see Figure 14), select the
+m2x.att.com/signup. as shown in Figure 8. Click the SIGN UP button on the
+page’s upper-right corner. On the page that appears (see Figure 9), select the
 registration method that makes the most sense for your particular needs and
 preferences.
 
-![Figure 13 – AT&T M2X Home Page](../images/starter-kit-guide/QuickStart13.png)  
-_Figure 13 – AT&T M2X Home Page_ 
+![Figure 8 – AT&T M2X Home Page](../images/starter-kit-guide/QuickStart13.png)  
+_Figure 8 – AT&T M2X Home Page_ 
 
-![Figure 14 – AT&T M2X Registration Page](../images/starter-kit-guide/QuickStart14.png)  
-_Figure 14 – AT&T M2X Registration Page_ 
+![Figure 9 – AT&T M2X Registration Page](../images/starter-kit-guide/QuickStart14.png)  
+_Figure 9 – AT&T M2X Registration Page_ 
 
 If you select to use your GitHub credentials, you will have to authorize AT&T to
-access your GitHub credentials as shown in Figure 15.
+access your GitHub credentials as shown in Figure 10.
 
-![Figure 15 – AT&T M2X Registration: GitHub Authorization](../images/starter-kit-guide/QuickStart15.png)  
-_Figure 15 – AT&T M2X Registration: GitHub Authorization_ 
+![Figure 10 – AT&T M2X Registration: GitHub Authorization](../images/starter-kit-guide/QuickStart15.png)  
+_Figure 10 – AT&T M2X Registration: GitHub Authorization_ 
 
 Once you complete the registration process, you will use these same
 credentials for your AT&T Flow ([https://flow.att.com](https://flow.att.com "flow.att.com")) and AT&T M2X
@@ -281,19 +281,19 @@ credentials for your AT&T Flow ([https://flow.att.com](https://flow.att.com "flo
 
 Before you can use the developer SIM that comes with the ISK, you must first
 register the SIM with Jasper. Point your browser of choice to [starterkit.att.com/
-app/sim-cards](http://starterkit.att.com/app/sim-cards  "starterkit.att.com/app/sim-cards ") then login to the site from the home page (Figure 16). You can
+app/sim-cards](http://starterkit.att.com/app/sim-cards  "starterkit.att.com/app/sim-cards ") then login to the site from the home page (Figure 11). You can
 use the AT&T account you created in the previous step to login to this site.
 
 Once you’re logged in, you’ll be taken to the AT&T IoT Starter Kit Dashboard
-(Figure 17). The SIM page should open automatically, if not, click the SIM Cards
+(Figure 12). The SIM page should open automatically, if not, click the SIM Cards
 tab on the left side of the page. From there, click the plus sign icon to add a SIM
 card to your account.
 
-![Figure 16 – AT&T IoT Starter Kit Home Page](../images/starter-kit-guide/QuickStart16.png)  
-_Figure 16 – AT&T IoT Starter Kit Home Page_ 
+![Figure 11 – AT&T IoT Starter Kit Home Page](../images/starter-kit-guide/QuickStart16.png)  
+_Figure 11 – AT&T IoT Starter Kit Home Page_ 
 
-![Figure 17 – AT&T IoT Starter Kit Dashboard](../images/starter-kit-guide/QuickStart17.png)  
-_Figure 17 – AT&T IoT Starter Kit Dashboard_ 
+![Figure 12 – AT&T IoT Starter Kit Dashboard](../images/starter-kit-guide/QuickStart17.png)  
+_Figure 12 – AT&T IoT Starter Kit Dashboard_ 
 
 Populate the form with your ISK Developer SIM ICCID (you’ll find the number
 printed on the face of the SIM card) and give the SIM a nickname (such as
@@ -314,11 +314,11 @@ is already compiled and ready to deploy to your ISK. However, if your device
 is running an older version of the mbed OS or if you want to make changes to
 the project’s code, you’ll need access to the ARM mbed web site. To create an
 account, point your browser of choice to [developer.mbed.org](http://developer.mbed.org "developer.mbed.org"). On the site’s
-home page, click the Log In/Signup button in the header bar (Figure 18) to begin
+home page, click the Log In/Signup button in the header bar (Figure 13) to begin
 the process.
 
-![Figure 18 – ARM mbed Developer Home Page](../images/starter-kit-guide/QuickStart18.png)  
-_Figure 18 – ARM mbed Developer Home Page_
+![Figure 13 – ARM mbed Developer Home Page](../images/starter-kit-guide/QuickStart18.png)  
+_Figure 13 – ARM mbed Developer Home Page_
 
 <p id="user-content-menu11"></p>
 #### OPTIONAL: CLOUDCONNECTKITS.ORG ACCOUNT 
@@ -329,21 +329,21 @@ but Avnet recommends that you register on their site so you can be notified
 of any software updates as well as other pertinent information as it becomes
 available. To register with the Avnet portal, point your browser of choice to
 [www.cloudconnectkits.org](http://www.cloudconnectkits.org "www.cloudconnectkits.org") then click the Sign In/Register button shown in the
-upper-right corner of Figure 19.
+upper-right corner of Figure 14.
 
-![Figure 19 – cloudconnectkits.org Home Page](../images/starter-kit-guide/QuickStart19.png)  
-_Figure 19 – cloudconnectkits.org Home Page_
+![Figure 14 – cloudconnectkits.org Home Page](../images/starter-kit-guide/QuickStart19.png)  
+_Figure 14 – cloudconnectkits.org Home Page_
 
 As part of the registration process, you’ll be asked for the ISK Serial Kit Number
-as shown in Figure 20. The serial number is the cellular shield serial number
+as shown in Figure 15. The serial number is the cellular shield serial number
 printed on the sticker on top of the metal shield on the cellular shield board
-highlighted in Figure 21.
+highlighted in Figure 16.
 
-![Figure 20 – cloudconnectkits.org Registration](../images/starter-kit-guide/QuickStart20.png)  
-_Figure 20 – cloudconnectkits.org Registration_  
+![Figure 15 – cloudconnectkits.org Registration](../images/starter-kit-guide/QuickStart20.png)  
+_Figure 15 – cloudconnectkits.org Registration_  
 
-![Figure 21 – ISK Serial Kit Number](../images/starter-kit-guide/QuickStart21.jpg)  
-_Figure 21 – ISK Serial Kit Number_
+![Figure 16 – ISK Serial Kit Number](../images/starter-kit-guide/QuickStart21.jpg)  
+_Figure 16 – ISK Serial Kit Number_
 
 <p id="user-content-menu12"></p>
 ### THE PATIENT DEVELOPER’S GUIDE TO CREATING THE FLOW APPLICATION
@@ -359,15 +359,15 @@ Services account.
 #### ACCESSING THE FLOW DASHBOARD
 
 To access the AT&T Flow dashboard, open your browser of choice and navigate
-to [http://flow.att.io](http://flow.att.io "flow.att.io"); you’ll see a page similar to the one shown in Figure 22.
+to [http://flow.att.io](http://flow.att.io "flow.att.io"); you’ll see a page similar to the one shown in Figure 17.
 Spend a few minutes looking around the IDE to get comfortable.
 
 **Note: Flow will automatically time-out a session after a specific amount of time,
 so even though you may have logged in previously, you may have to login again
 to access the system.**
 
-![Figure 22 – AT&T Flow Dashboard](../images/starter-kit-guide/QuickStart22.png)  
-_Figure 22 – AT&T Flow Dashboard_
+![Figure 17 – AT&T Flow Dashboard](../images/starter-kit-guide/QuickStart22.png)  
+_Figure 17 – AT&T Flow Dashboard_
 
 For this project, we’re going to use an existing Flow project; because of the
 version control capabilities of Flow, we’ll copy the project by forking it.
@@ -377,35 +377,35 @@ version control capabilities of Flow, we’ll copy the project by forking it.
 
 To fork the Starter Kit project, in the browser, navigate to the following URL:
 [https://flow.att.io/starter-kit-core/starter-kit-base/home](https://flow.att.io/starter-kit-core/starter-kit-base/home "flow.att.io/starter-kit-core/starter-kit-base/home"); you’ll see a page
-similar to the one shown in Figure 23. Next, complete the following steps.
+similar to the one shown in Figure 18. Next, complete the following steps.
 
 1\. Click the Fork button highlighted in the figure to create a copy of the project
 for your exclusive use.
 
-![Figure 23 – Starter Kit Reference Project](../images/starter-kit-guide/QuickStart23.png)  
-_Figure 23 – Starter Kit Reference Project_
+![Figure 18 – Starter Kit Reference Project](../images/starter-kit-guide/QuickStart23.png)  
+_Figure 18 – Starter Kit Reference Project_
 
-2\. In the pop-up dialog that appears (Figure 24), Flow provides you with an
+2\. In the pop-up dialog that appears (Figure 19), Flow provides you with an
 opportunity to rename the project as part of the forking process. The dialog
 shows the original project name as both the source and target name for this
 project. If you want to use a different name for your project (recommended),
 click the target file name and the target file name will change into an input field
-as shown in Figure 24. Enter the new name for the project then click the Fork
+as shown in Figure 19. Enter the new name for the project then click the Fork
 button to complete the process.
 
-![Figure 24 – Forking the Flow Project](../images/starter-kit-guide/QuickStart24.png)  
-_Figure 24 – Forking the Flow Project_
+![Figure 19 – Forking the Flow Project](../images/starter-kit-guide/QuickStart24.png)  
+_Figure 19 – Forking the Flow Project_
 
 
 At this point, the forked (and potentially renamed) project will open in the Flow
-IDE as shown in Figure 25.
+IDE as shown in Figure 20.
 
-![Figure 25 – Flow IDE](../images/starter-kit-guide/QuickStart25.png)  
-_Figure 25 – Flow IDE_
+![Figure 20 – Flow IDE](../images/starter-kit-guide/QuickStart25.png)  
+_Figure 20 – Flow IDE_
 
 3\. When you first execute a Flow project in AT&T’s cloud environment, the
 initial execution container setup takes a few minutes. So, to save time, click
-the Deploy button shown in the upper-right corner of Figure 25 to start the
+the Deploy button shown in the upper-right corner of Figure 20 to start the
 provisioning process. This will compile and activate your project in the Flow
 cloud environment. As you make changes to the project and re-deploy,
 subsequent deployments will take mere seconds.
@@ -420,54 +420,54 @@ information between M2X and Flow, so you’ll want to have either two browser
 windows open or two tabs, one open to M2X and the other to Flow.
 
 1\. In M2X, click the ‘Hello, USERNAME’ button in the upper-right corner of the
-M2X console then select Account Settings (Figure 26).
+M2X console then select Account Settings (Figure 21).
 
-![Figure 26 – M2X Account Settings](../images/starter-kit-guide/QuickStart26.png)  
-_Figure 26 – M2X Account Settings_
+![Figure 21 – M2X Account Settings](../images/starter-kit-guide/QuickStart26.png)  
+_Figure 21 – M2X Account Settings_
 
-2\. Highlight the Master Key (Figure 27) and copy it to the clipboard.
+2\. Highlight the Master Key (Figure 22) and copy it to the clipboard.
 
-![Figure 27 – M2X Master Keys](../images/starter-kit-guide/QuickStart27.png)  
-_Figure 27 – M2X Master Keys_
+![Figure 22 – M2X Master Keys](../images/starter-kit-guide/QuickStart27.png)  
+_Figure 22 – M2X Master Keys_
 
 3\. Switch to the Flow console window (or tab) and open your copy of the sample
-project (Figure 28). Select Data tab on the upper-left side of the IDE (1) then
+project (Figure 23). Select Data tab on the upper-left side of the IDE (1) then
 locate the Configuration FUNCTION element (2).
 
-![Figure 28 – Flow Application Configuration](../images/starter-kit-guide/QuickStart28.png)  
-_Figure 28 – Flow Application Configuration_
+![Figure 23 – Flow Application Configuration](../images/starter-kit-guide/QuickStart28.png)  
+_Figure 23 – Flow Application Configuration_
 
-4\. Double-click the Configuration function (highlighted as #2 in Figure 28);
-the Flow IDE will open the code editing window shown in Figure 29. Paste M2X
+4\. Double-click the Configuration function (highlighted as #2 in Figure 23);
+the Flow IDE will open the code editing window shown in Figure 24. Paste M2X
 account Master Key you copied in step 2 into the code editor, replacing the
 ‘<get from M2X>’ text highlighted in the figure. Click the OK button to continue.
 
-![Figure 29 – Flow Function Code Editor](../images/starter-kit-guide/QuickStart29.png)  
-_Figure 29 – Flow Function Code Editor_
+![Figure 24 – Flow Function Code Editor](../images/starter-kit-guide/QuickStart29.png)  
+_Figure 24 – Flow Function Code Editor_
 
 5\. At the bottom of the Flow project’s IDE Window are two tabs: Info and
-Endpoints (Figure 30). Click the Endpoints tab to continue.
+Endpoints (Figure 25). Click the Endpoints tab to continue.
 
-![Figure 30 – Flow IDE Bottom Tab](../images/starter-kit-guide/QuickStart30.png)  
-_Figure 30 – Flow IDE Bottom Tab_
+![Figure 25 – Flow IDE Bottom Tab](../images/starter-kit-guide/QuickStart30.png)  
+_Figure 25 – Flow IDE Bottom Tab_
 
-A panel will open that lists the endpoints for the project (Figure 31). To finish
+A panel will open that lists the endpoints for the project (Figure 26). To finish
 the Flow application configuration, we’ll need the Base URL shown in the figure.
 Click the Copy button to the right of the Base URL to copy the value to the
 clipboard.
 
-![Figure 31 – Flow Project Endpoints](../images/starter-kit-guide/QuickStart31.png)  
-_Figure 31 – Flow Project Endpoints_
+![Figure 26 – Flow Project Endpoints](../images/starter-kit-guide/QuickStart31.png)  
+_Figure 26 – Flow Project Endpoints_
 
 **Note: The project’s endpoints are generated when the application is deployed into the AT&T
 cloud environment. If your Endpoints tab is empty, try deploying the application and trying
 again. To deploy the application, click the Deploy button in the upper-right corner of the Flow
 IDE.**
 
-6\. Double-click the Configuration function (highlighted as #2 in Figure 28) to
+6\. Double-click the Configuration function (highlighted as #2 in Figure 23) to
 open the Flow code editor. The Base URL copied in the previous step is used
 to update two variables in the project’s Configuration function. Using the Base
-URL shown in Figure 31 as an example (for this step, you’ll want to use the value
+URL shown in Figure 26 as an example (for this step, you’ll want to use the value
 you copied from the Endpoints tab):
 
 [https://run-east.att.io/01020304050/998877665544332211/in/flow](https://run-east.att.io/01020304050/998877665544332211/in/flow "run-east.att.io/01020304050/998877665544332211/in/flow")
@@ -477,7 +477,7 @@ of the Base URL (without the https://): `run-east.att.io`. The Configuration
 function’s `base_uri` value is everything after the host name (including the
 trailing forward slash): `/01020304050/998877665544332211/in/flow`.
 
-In the editor, look for the following code (shown in Figure 32):
+In the editor, look for the following code (shown in Figure 27):
 
 **var base_hostname = “<get from Base URL>”;  
 var base_uri = “<get from Base URL>”;**
@@ -490,17 +490,17 @@ var base_uri = “/01020304050/998877665544332211/in/flow”;**
 
 Click the OK button when you have completed making the change.
 
-![Figure 32 – Setting base_hostname and base_uri](../images/starter-kit-guide/QuickStart32.png)  
-_Figure 32 – Setting base\_hostname and base\_uri_
+![Figure 27 – Setting base_hostname and base_uri](../images/starter-kit-guide/QuickStart32.png)  
+_Figure 27 – Setting base\_hostname and base\_uri_
 
 7\. With the configuration updated, a blue dot will appear on the upper-right
-corner of the Configuration function element as shown in Figure 33. This
+corner of the Configuration function element as shown in Figure 28. This
 indicates that the element’s configuration has changed but has not yet been
 deployed. Click the IDE’s Deploy button to deploy the application and resolve
 this issue.
 
-![Figure 33 – Changes Waiting to be Deployed](../images/starter-kit-guide/QuickStart33.png)  
-_Figure 33 – Changes Waiting to be Deployed_
+![Figure 28 – Changes Waiting to be Deployed](../images/starter-kit-guide/QuickStart33.png)  
+_Figure 28 – Changes Waiting to be Deployed_
 
 
 <p id="user-content-menu16"></p>
@@ -510,31 +510,31 @@ The Flow application will automatically create a virtual device for the project 
 M2X; all you’ll have to do is kick off the process. This is a one-time operation that
 has to be performed.
 
-In the Flow IDE (Figure 34), click on the Virtual Device tab (1) at the top of the
+In the Flow IDE (Figure 29), click on the Virtual Device tab (1) at the top of the
 IDE. Locate the project’s Initialize component (2) in the lower-left corner of the
 canvas. Click once on the button to the left of the Initialize element (3).
 
-![Figure 34 – Initializing M2X](../images/starter-kit-guide/QuickStart34.png)  
-_Figure 34 – Initializing M2X_
+![Figure 29 – Initializing M2X](../images/starter-kit-guide/QuickStart34.png)  
+_Figure 29 – Initializing M2X_
 
 There’s no direct indication in Flow whether the initialization succeeded or
 failed. Notice the green Debug components in the flow application at the
-bottom of Figure 34; they’re used to write content to the debug console. Click
+bottom of Figure 29; they’re used to write content to the debug console. Click
 the Debug tab shown on the bottom of the figure and Flow will open the Debug
-pane shown in Figure 35. Here you can see the message payload data passed
+pane shown in Figure 30. Here you can see the message payload data passed
 to the Debug component. In this case, the initialization failed because the
 initialization process ran a second time and the virtual device already existed.
 
-![Figure 35 – Flow Debug Output](../images/starter-kit-guide/QuickStart35.png)  
-_Figure 35 – Flow Debug Output_
+![Figure 30 – Flow Debug Output](../images/starter-kit-guide/QuickStart35.png)  
+_Figure 30 – Flow Debug Output_
 
 Verify the component has been created in the M2X environment by returning
 to your M2X window and clicking Devices. Your virtual device should appear as
-shown in Figure 36. If you expand it by clicking the + sign to its left, you will see
+shown in Figure 31. If you expand it by clicking the + sign to its left, you will see
 the different M2X streams that have been created for it.
 
-![Figure 36 – Automatically Registered Virtual Device in M2X](../images/starter-kit-guide/QuickStart36.png)  
-_Figure 36 – Automatically Registered Virtual Device in M2X_
+![Figure 31 – Automatically Registered Virtual Device in M2X](../images/starter-kit-guide/QuickStart36.png)  
+_Figure 31 – Automatically Registered Virtual Device in M2X_
 
 <p id="user-content-menu17"></p>
 #### DEPLOYING THE PROJECT FIRMWARE TO THE DEVELOPMENT BOARD
@@ -564,13 +564,13 @@ illuminate.
 3\. Plug a micro USB cable into the SDA USB (J26) port on the FRDM-K64F board.
 Connect the other end of the cable to a USB port on your laptop or desktop
 computer. Your computer should recognize the device as a standard USB drive
-and install the necessary communications software to work with it (Figure 37).
+and install the necessary communications software to work with it (Figure 32).
 
-![Figure 37 – Windows Explorer Exploring the Development Board](../images/starter-kit-guide/QuickStart37.png)  
-_Figure 37 – Windows Explorer Exploring the Development Board_
+![Figure 32 – Windows Explorer Exploring the Development Board](../images/starter-kit-guide/QuickStart37.png)  
+_Figure 32 – Windows Explorer Exploring the Development Board_
 
 4\. Verify the development board’s firmware is at version 0226 or higher by
-opening the DETAILS.TXT file shown in Figure 37. The current firmware version
+opening the DETAILS.TXT file shown in Figure 32. The current firmware version
 is listed in the file and is shown below:
 
 
@@ -597,26 +597,26 @@ project in order to customize it for your AT&T IoT Services environment.
 
 1\. Open a new browser window then navigate to [https://developer.mbed.org/
 users/JMF/code/Avnet_ATT_Cellular_IOT](https://developer.mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT "developer.mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT"). On the page that appears, click
-the Import into Compiler button highlighted in Figure 38. The development
+the Import into Compiler button highlighted in Figure 33. The development
 environment will open start the import process.
 
-![Figure 38 – ARM mbed Firmware Project Page](../images/starter-kit-guide/QuickStart38.png)  
-_Figure 38 – ARM mbed Firmware Project Page_
+![Figure 33 – ARM mbed Firmware Project Page](../images/starter-kit-guide/QuickStart38.png)  
+_Figure 33 – ARM mbed Firmware Project Page_
 
 2\. During the import process, you will be prompted to update settings that
-control the import process (Figure 39); accept the default settings then click
+control the import process (Figure 34); accept the default settings then click
 the Import button, optionally changing the project name during the process if
 you wish.
 
-![Figure 39 – mbed IDE Import Dialog](../images/starter-kit-guide/QuickStart39.png)  
-_Figure 39 – mbed IDE Import Dialog_
+![Figure 34 – mbed IDE Import Dialog](../images/starter-kit-guide/QuickStart39.png)  
+_Figure 34 – mbed IDE Import Dialog_
 
-![Figure 40 – mbed IDE](../images/starter-kit-guide/QuickStart40.png)  
-_Figure 40 – mbed IDE_
+![Figure 35 – mbed IDE](../images/starter-kit-guide/QuickStart40.png)  
+_Figure 35 – mbed IDE_
 
 3\. Before you can compile the software, you’ll have to change some constants
 defined within the application to match your project configuration. In the mbed
-IDE Program Workspace window shown on the left side of Figure 40, click the
+IDE Program Workspace window shown on the left side of Figure 35, click the
 config_me.h file to open it in the editor. With the file open in the editor, look for
 the following code:
 
@@ -653,12 +653,12 @@ for MY_SERVER_URL and FLOW_BASE_URL are for a Flow application endpoint,
 just like you worked with before, but they’re for a specific endpoint in the Flow
 application.
 Switch back to the Flow IDE and click the Data tab on the top of the IDE window.
-Using Figure 41 as a guide, select the Climate GET component (1) then click the
+Using Figure 36 as a guide, select the Climate GET component (1) then click the
 Endpoints tab at the bottom of the window and click the Copy button next to
 the Base URL (2) to copy the value to the clipboard.
 
-![Figure 41 – AT&T Flow IDE: Climate GET Endpoint](../images/starter-kit-guide/QuickStart41.png)  
-_Figure 41 – AT&T Flow IDE: Climate GET Endpoint_
+![Figure 36 – AT&T Flow IDE: Climate GET Endpoint](../images/starter-kit-guide/QuickStart41.png)  
+_Figure 36 – AT&T Flow IDE: Climate GET Endpoint_
 
 In the mbed IDE, populate the MY_SERVER_URL constant in the code with the
 hostname from the URL you copied in the previous step. Populate the FLOW_
@@ -666,10 +666,10 @@ BASE_URL value in quotes with the remainder of the copied Base URL.
 
 To determine the value for FLOW_DEVICE_NAME, open the M2X browser
 window and click on the device that the Flow application created earlier then
-copy the Device Serial number highlighted in Figure 42.
+copy the Device Serial number highlighted in Figure 37.
 
-![Figure 42 – AT&T M2X Starter Kit Device Page](../images/starter-kit-guide/QuickStart41.png)  
-_Figure 42 – AT&T M2X Starter Kit Device Page_
+![Figure 37 – AT&T M2X Starter Kit Device Page](../images/starter-kit-guide/QuickStart41.png)  
+_Figure 37 – AT&T M2X Starter Kit Device Page_
 
 Based on the example provided above, the configuration values should look
 something like the following, but using values from your project configuration:
@@ -727,10 +727,10 @@ Windows users will have to install some additional software to get this working.
 To install the software, follow the instructions at [https://developer.mbed.org/
 handbook/Windows-serial-configuration](https://developer.mbed.org/handbook/Windows-serial-configuration "developer.mbed.org/handbook/Windows-serial-configuration"). After the serial drivers have been
 installed, determine which COM port is being used by opening the device
-manager and looking for the COM port information highlighted in Figure 43.
+manager and looking for the COM port information highlighted in Figure 38.
 
-![Figure 43 – Windows Device Manager](../images/starter-kit-guide/QuickStart43.png)  
-_Figure 43 – Windows Device Manager_
+![Figure 38 – Windows Device Manager](../images/starter-kit-guide/QuickStart43.png)  
+_Figure 38 – Windows Device Manager_
 
 You will need to use a terminal application to monitor the output from the
 development board. The default terminal installed on your development
@@ -748,43 +748,43 @@ Default terminal configuration settings should be:
 * Parity = None
 * Data bits = 8
 * Flow Control = none
-* COM port set appropriately (Figure 43)
+* COM port set appropriately (Figure 38)
 
 With everything installed and operating, you should be able to see the firmware
-application’s output in the terminal window as shown in Figure 44. In this
+application’s output in the terminal window as shown in Figure 39. In this
 example, the development board has just powered up and it is initializing the
 cellular shield.
 
-![Figure 44 – Terminal: Initializing the Cellular Shield Model](../images/starter-kit-guide/QuickStart44.png)  
-_Figure 44 – Terminal: Initializing the Cellular Shield Model_
+![Figure 39 – Terminal: Initializing the Cellular Shield Model](../images/starter-kit-guide/QuickStart44.png)  
+_Figure 39 – Terminal: Initializing the Cellular Shield Model_
 
 Once the modem initializes, the app will start sending data to AT&T M2X
-through AT&T Flow. Figure 45 shows application output as it sends sensor data
+through AT&T Flow. Figure 40 shows application output as it sends sensor data
 to the cloud. In the figure, you can see the AT commands sent to the modem by
 the application as well as the results of the HTTP call to the AT&T cloud.
 
-![Figure 45 – Terminal: Sending Data to the AT&T IoT Cloud](../images/starter-kit-guide/QuickStart45.png)  
-_Figure 45 – Terminal: Sending Data to the AT&T IoT Cloud_
+![Figure 40 – Terminal: Sending Data to the AT&T IoT Cloud](../images/starter-kit-guide/QuickStart45.png)  
+_Figure 40 – Terminal: Sending Data to the AT&T IoT Cloud_
 
 To verify messages from the board are arriving in Flow, open the Flow project,
 and then click the Debug tab at the bottom of the IDE window. The Flow
 application sends debug messages to this console from many parts of the
-application, you can see some example output in Figure 46. Look for green
+application, you can see some example output in Figure 41. Look for green
 Debug components in the Flow application to see all the places that write to the
 debug console.
 
-![Figure 46 – AT&T Flow Debug Console](../images/starter-kit-guide/QuickStart46.png)  
-_Figure 46 – AT&T Flow Debug Console_
+![Figure 41 – AT&T Flow Debug Console](../images/starter-kit-guide/QuickStart46.png)  
+_Figure 41 – AT&T Flow Debug Console_
 
 To verify messages from the board are arriving in Flow, open the Flow project,
 and then click the Debug tab at the bottom of the IDE window. The Flow
 application sends debug messages to this console from many parts of the
-application, you can see some example output in Figure 46. Look for green
+application, you can see some example output in Figure 41. Look for green
 Debug components in the Flow application to see all the places that write to the
 debug console.
 
-![Figure 47 – AT&T M2X Graphing Sensor Data](../images/starter-kit-guide/QuickStart47.png)  
-_Figure 47 – AT&T M2X Graphing Sensor Data_
+![Figure 42 – AT&T M2X Graphing Sensor Data](../images/starter-kit-guide/QuickStart47.png)  
+_Figure 42 – AT&T M2X Graphing Sensor Data_
 
 <p id="user-content-menu21"></p>
 ### THE IMPATIENT DEVELOPER’S GUIDE TO CREATING THE FLOW APPLICATION

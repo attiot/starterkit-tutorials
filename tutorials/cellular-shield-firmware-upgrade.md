@@ -11,7 +11,7 @@
 
 From time to time, WNC releases firmware updates for the WNC Cellular Shield. These updates fix known issues with the board's firmware or may add or update software capabilities on the board. This tutorial describes the steps you must perform to install the firmware update. There are a few weird instructions in here, so you shouldn't just plug the board in and get to work. Instead, please make sure to read through the instructions first to ensure you don't skip or rush through a step.  
 
-**NOTE:** This does require a Windows PC for running the WNC Connection Manager (WNCCM).
+**NOTE:** This does require a Windows PC for running the WNC Connection Manager (WNCCM), preferably Windows 7/8.
 
 ### Steps
 

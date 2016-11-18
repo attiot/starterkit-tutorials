@@ -3,7 +3,7 @@
 
 |   Author   | Created At  | Updated On  |
 | ---------- | ----------- | ----------- |
-| johnwargo  | 2016-10-12  | 2016-10-18  |
+| johnwargo  | 2016-10-12  | 2016-11-18  |
 
 ------
 
@@ -16,7 +16,7 @@ The [sample project for the AT&T IoT Starter Kit](https://starterkit.att.com/qui
 
 The starter kit project, however, was coded to accept input from a variety of sensors. In this tutorial, you'll learn how to connect the [Seeed Studio Xadow GPS v2](https://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html) module to the starter kit's cellular shield. Once connected, you'll modify the starter kit sample project's firmware to enable the GPS capabilities of the application. With the modification, the FRDM-K64F will retrieve geolocation information from the GPS module then sent it to M2X for storage and display.
 
-**Note:** This tutorial assumes you've already completed the NEED_THE_RIGHT_LINK_HERE [AT&T IoT Starter Kit tutorial](https://starterkit.att.com/quickstart) project and have operational AT&T Flow, AT&T M2X and mbed Developer accounts with the project code loaded. If you haven't worked through that project, start there and return here once you have it up and running. 
+**Note:** This tutorial assumes you've already completed the [AT&T IoT Starter Kit tutorial](https://starterkit.att.com/tutorials/starter-kit-guide) project and have operational AT&T Flow, AT&T M2X and mbed Developer accounts with the project code loaded. If you haven't worked through that project, start there and return here once you have it up and running. 
  
 ### Steps
 

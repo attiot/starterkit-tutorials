@@ -1,8 +1,10 @@
 # AT&T IoT Starter Kit Getting Started Guide
 
-|      Author      | Created At |
-|:----------------:|:----------:|
-| Starter Kit Team | 2016-10-17 |
+|      Author      | Created At | Updated At |
+|:----------------:|:----------:| :--------: |
+| Starter Kit Team | 2016-10-17 | 2016-11-19 |
+
+**IMPORTANT NOTE:** All IoT Starter Kits need to update their modem firmware to 11.50, [using these instructions: https://starterkit.att.com/tutorials/cellular-shield-firmware-upgrade](https://starterkit.att.com/tutorials/cellular-shield-firmware-upgrade).
 
 # CONTENTS
 
@@ -14,32 +16,32 @@
   * [IoT Project Approaches with Flow and M2X](#user-content-menu6 "IoT Project Approaches with Flow and M2X")
   * [Account Setup](#user-content-menu7 "Account Setup")
      * [AT&T M2X Account](#user-content-menu8 "AT&T M2X Account")
-     * [Jasper Account (SIM Card Registration)](#user-content-menu9 "Jasper Account (SIM Card Registration)")
+     * [SIM Card Registration](#user-content-menu9 "SIM Card Registration")
      * [ARM mbed.org Account](#user-content-menu10 "ARM mbed.org Account")
      * [Optional: Cloudconnectkits.org Account](#user-content-menu11 "Optional: Cloudconnectkits.org Account")
-  * [The Patient Developer’s Guide to Creating the Flow Application](#user-content-menu12 "The Patient Developer’s Guide to Creating the Flow Application")
+  * [The Expanded Guide ](#user-content-menu12 "The Expanded Guide")
   	 * [Accessing The Flow Dashboard](#user-content-menu13 "Accessing The Flow Dashboard")
   	 * [Forking the Existing Project](#user-content-menu14 "Forking the Existing Project")
   	 * [Configure the Flow Application to Access Your M2X Account](#user-content-menu15 "Configure the Flow Application to Access Your M2X Account")
   	 * [Executing the M2X Setup Flow](#user-content-menu16 "Executing the M2X Setup Flow")
-  	 * [Deploying the Project Firmware to the Development Board](#user-content-menu17 "Deploying the Project Firmware to the Development Board")
+  	 * [Deploying the Project Software to the Development Board](#user-content-menu17 "Deploying the Project Software to the Development Board")
      * [Hardware Setup](#user-content-menu18 "Hardware Setup")
      * [Software Modification](#user-content-menu19 "Software Modification")
      * [Monitoring Activity](#user-content-menu20 "Monitoring Activity")
   * [The Impatient Developer’s Guide to Creating the Flow Application](#user-content-menu21 "The Impatient Developer’s Guide to Creating the Flow Application")
      * [Flow & M2X Configuration](#user-content-menu22 "Flow & M2X Configuration")
      * [Executing the M2X Setup Flow](#user-content-menu23 "Executing the M2X Setup Flow")
-     * [Deploying the Project Firmware to the Development Board](#user-content-menu24 "Deploying the Project Firmware to the Development Board")
+     * [Deploying the Project Software to the Development Board](#user-content-menu24 "Deploying the Project Software to the Development Board")
      * [Hardware Setup](#user-content-menu25 "Hardware Setup")
      * [Software Modification](#user-content-menu26 "Software Modification")
      * [Monitoring Activity](#user-content-menu27 "Monitoring Activity")
-         * [Firmware Application Modifications](#user-content-menu28 "Firmware Application Modifications")
+         * [Software Application Modifications](#user-content-menu28 "Software Application Modifications")
 
 <p id="user-content-menu1"></p>
 ## ASSEMBLING THE STARTER KIT
 
 
-Assembling the ISK is easy, simply mount the cellular shield onto the
+Assembling the IoT SK is easy, simply mount the cellular shield onto the
 NXT FRDM-K64F Development Board, attach the antennas then apply
 power. Figure 1 shows the development and cellular shield boards ready
 to connect. As you can see from the figure, the Arduino pin layout is
@@ -74,10 +76,10 @@ connection must be tight, so there’s good connectivity between the
 board and the antenna, but not too tight as you might damage the board
 or the connector if you tighten it too much.  
 
-![Figure 3 – ISK Cellular Antennas](../images/starter-kit-guide/QuickStart08.jpg)  
-_Figure 3 – ISK Cellular Antennas_  
+![Figure 3 – IoT SK Cellular Antennas](../images/starter-kit-guide/QuickStart08.jpg)  
+_Figure 3 – IoT SK Cellular Antennas_  
 
-The ISK comes with two micro-USB cables and a power supply. Connect a
+The IoT SK comes with two micro-USB cables and a power supply. Connect a
 USB cable to the micro-USB connector labeled 5V DC on the lower-right
 corner of the cellular shield board shown in Figure 4. Connect the other
 end of the cable to the power supply as shown in the figure. Due to the pin
@@ -89,17 +91,17 @@ _Figure 4 – Completed Assembly_
 
 _**Note: The cellular shield has specific voltage requirements, it requires 5V at 2.4A. USB
 ports and cell phone chargers provide the necessary 5V, but may not provide the required
-current. If using a different power source than one provided with the ISK, be sure to check
+current. If using a different power source than one provided with the IoT SK, be sure to check
 the power supply’s output specifications to ensure it provides at least 2.4A current. Without the correct input power, the modem will not initialize properly.**_  
 
 The other USB cable is used to connect the development board to a PC in
-order to download firmware updates or custom applications to the board.
+order to download firmware updates or custom software applications to the board.
 Connect the USB cable to the development board using the Micro-USB
 connector on the lower-left corner of the development board shown in
 Figure 4. Use the connector to the left of the Ethernet port shown in the
 figure.  
 
-Finally, activate the SIM using the instructions provided in [Jasper Account (SIM Card Registration)](#menu9 "Jasper Account (SIM Card Registration)") then insert the SIM into the cellular shield. The socket for the
+Finally, activate the SIM using the instructions provided in [SIM Card Registration](#menu9 "SIM Card Registration") then insert the SIM into the cellular shield. The socket for the
 SIM is on the cellular shield, right above the development board’s Ethernet
 connector shown in Figure 4. Insert the SIM with its metal connectors
 facing down toward the cellular shield and the end with the cut-off corner
@@ -166,8 +168,8 @@ application. You can learn more about AT&T Flow at [flow.att.com](http://flow.at
 <p id="user-content-menu5"></p>
 ## SAMPLE IOT PROJECT
 
-To show you how to utilize the ISK and AT&T’s IoT cloud services, for the
-remainder of this guide, you’ll work through setting up and executing a prebuilt IoT project using the ISK, AT&T Flow and AT&T M2X. The project takes
+To show you how to utilize the IoT SK and AT&T’s IoT cloud services, for the
+remainder of this guide, you’ll work through setting up and executing a prebuilt IoT project using the IoT SK, AT&T Flow and AT&T M2X. The project takes
 measurements using the various sensors on the development board then
 sends the values to AT&T M2X through AT&T Flow. Special commands, in the
 form of JSON strings, are sent back to the development board from the AT&T
@@ -177,12 +179,12 @@ as the LED.
 **To create this project, you’ll complete the following steps:**
 
 1. Create accounts for the various online services you will use for this project.
-2. Activate the developer SIM included in the ISK (see ‘[Jasper Account (SIM Card Registration)](#menu9 "Jasper Account (SIM Card Registration)")’).
+2. Activate the developer SIM included in the IoT SK (see ‘[SIM Card Registration](#menu9 "SIM Card Registration")’).
 3. Use AT&T Flow to fork the sample project.
 4. Update the Flow project to use your AT&T account settings.
 5. Deploy the Flow project in the AT&T cloud environment.
-6. Configure an mbed firmware application for your AT&T Flow environment.
-7. Deploy the firmware to the development board.
+6. Configure an ARM mbed software application for your AT&T Flow environment.
+7. Deploy the software (.bin file) to the development board.
 8. Start collecting data.
 
 To gain an understanding of how we’re structuring the sample project, spend
@@ -212,8 +214,8 @@ of on the IoT device) about the data and acting somehow, such as discarding
 banal data or executing a trigger to perform a related action.
 
 For this project, you’ll use a pre-built Flow application to collect data from
-the ISK device, then process the data before sending the data to M2X. the
-development board in the ISK includes a variety of sensors, so you can
+the IoT SK device, then process the data before sending the data to M2X. the
+development board in the IoT SK includes a variety of sensors, so you can
 complete the project without needing any additional hardware.
 
 The Flow application takes advantage of its seamless integration with M2X
@@ -261,26 +263,28 @@ registration method that makes the most sense for your particular needs and
 preferences.
 
 ![Figure 8 – AT&T M2X Home Page](../images/starter-kit-guide/QuickStart13.png)  
-_Figure 8 – AT&T M2X Home Page_ 
+_Figure 8 – AT&T M2X Home Page_
 
 ![Figure 9 – AT&T M2X Registration Page](../images/starter-kit-guide/QuickStart14.png)  
-_Figure 9 – AT&T M2X Registration Page_ 
+_Figure 9 – AT&T M2X Registration Page_
 
 If you select to use your GitHub credentials, you will have to authorize AT&T to
 access your GitHub credentials as shown in Figure 10.
 
 ![Figure 10 – AT&T M2X Registration: GitHub Authorization](../images/starter-kit-guide/QuickStart15.png)  
-_Figure 10 – AT&T M2X Registration: GitHub Authorization_ 
+_Figure 10 – AT&T M2X Registration: GitHub Authorization_
 
 Once you complete the registration process, you will use these same
 credentials for your AT&T Flow ([https://flow.att.com](https://flow.att.com "flow.att.com")) and AT&T M2X
 ([https://m2x.att.com](https://m2x.att.com "m2x.att.com")) accounts.
 
 <p id="user-content-menu9"></p>
-#### JASPER ACCOUNT (SIM CARD REGISTRATION)
+#### SIM CARD REGISTRATION
 
-Before you can use the developer SIM that comes with the ISK, you must first
-register the SIM with Jasper. Point your browser of choice to [starterkit.att.com/
+**NOTE to Hackathon Participants:** Typically, you will be using a SIM which we already activated.  You can skip registering the SIM.  If you want to use the Control Center API, then you will still need to register to get an API key.
+
+Before you can use the developer SIM that comes with the IoT SK, you must first
+register the SIM. Point your browser of choice to [starterkit.att.com/
 app/sim-cards](http://starterkit.att.com/app/sim-cards  "starterkit.att.com/app/sim-cards ") then login to the site from the home page (Figure 11). You can
 use the AT&T account you created in the previous step to login to this site.
 
@@ -290,18 +294,19 @@ tab on the left side of the page. From there, click the plus sign icon to add a 
 card to your account.
 
 ![Figure 11 – AT&T IoT Starter Kit Home Page](../images/starter-kit-guide/QuickStart16.png)  
-_Figure 11 – AT&T IoT Starter Kit Home Page_ 
+_Figure 11 – AT&T IoT Starter Kit Home Page_
 
 ![Figure 12 – AT&T IoT Starter Kit Dashboard](../images/starter-kit-guide/QuickStart17.png)  
-_Figure 12 – AT&T IoT Starter Kit Dashboard_ 
+_Figure 12 – AT&T IoT Starter Kit Dashboard_
 
-Populate the form with your ISK Developer SIM ICCID (you’ll find the number
+Populate the form with your IoT SK Developer SIM ICCID (you’ll find the number
 printed on the face of the SIM card) and give the SIM a nickname (such as
-‘Starter Kit’ or ‘ISK’). You’ll have to agree to several terms of service before you
+‘Starter Kit’ or ‘IoT SK’). You’ll have to agree to several terms of service before you
 can continue.
 
 When the form’s populated and you’ve accepted the terms for all of the
-agreements, click the ACTIVATE SIM button on the form to save your changes.
+agreements, click the ACTIVATE SIM button on the form to save your changes.  After the SIM is attached to your account it will appear on your Dashboard.  You may need to refresh to see it.  Click on the SIM to expand it change the status from "Test Ready" to "Activated".
+
 Once you complete this registration process, you’ll be able to use the SIM
 for free for six months with access to transmit 300 MB of data and 300 SMS
 messages.
@@ -309,21 +314,23 @@ messages.
 <p id="user-content-menu10"></p>
 #### ARM MBED.ORG ACCOUNT
 
-The project firmware, the custom code that runs on the development board,
-is already compiled and ready to deploy to your ISK. However, if your device
+The project software, the custom code that runs on the development board,
+is already compiled and ready to deploy to your IoT SK. However, if your device
 is running an older version of the mbed OS or if you want to make changes to
 the project’s code, you’ll need access to the ARM mbed web site. To create an
 account, point your browser of choice to [developer.mbed.org](http://developer.mbed.org "developer.mbed.org"). On the site’s
 home page, click the Log In/Signup button in the header bar (Figure 13) to begin
 the process.
 
+Make sure to import the NXP K64F target platform at [https://developer.mbed.org/platforms/FRDM-K64F/](https://developer.mbed.org/platforms/FRDM-K64F/).
+
 ![Figure 13 – ARM mbed Developer Home Page](../images/starter-kit-guide/QuickStart18.png)  
 _Figure 13 – ARM mbed Developer Home Page_
 
 <p id="user-content-menu11"></p>
-#### OPTIONAL: CLOUDCONNECTKITS.ORG ACCOUNT 
+#### OPTIONAL: CLOUDCONNECTKITS.ORG ACCOUNT
 
-The AT&T ISK is produced by Avnet, and they’ve created a developer portal
+The AT&T IoT SK is produced by Avnet, and they’ve created a developer portal
 with developer resources, sample applications and more. This is not required,
 but Avnet recommends that you register on their site so you can be notified
 of any software updates as well as other pertinent information as it becomes
@@ -334,7 +341,7 @@ upper-right corner of Figure 14.
 ![Figure 14 – cloudconnectkits.org Home Page](../images/starter-kit-guide/QuickStart19.png)  
 _Figure 14 – cloudconnectkits.org Home Page_
 
-As part of the registration process, you’ll be asked for the ISK Serial Kit Number
+As part of the registration process, you’ll be asked for the IoT SK Serial Kit Number
 as shown in Figure 15. The serial number is the cellular shield serial number
 printed on the sticker on top of the metal shield on the cellular shield board
 highlighted in Figure 16.
@@ -342,15 +349,15 @@ highlighted in Figure 16.
 ![Figure 15 – cloudconnectkits.org Registration](../images/starter-kit-guide/QuickStart20.png)  
 _Figure 15 – cloudconnectkits.org Registration_  
 
-![Figure 16 – ISK Serial Kit Number](../images/starter-kit-guide/QuickStart21.jpg)  
-_Figure 16 – ISK Serial Kit Number_
+![Figure 16 – IoT SK Serial Kit Number](../images/starter-kit-guide/QuickStart21.jpg)  
+_Figure 16 – IoT SK Serial Kit Number_
 
 <p id="user-content-menu12"></p>
 ### THE PATIENT DEVELOPER’S GUIDE TO CREATING THE FLOW APPLICATION
 
 The AT&T Flow application for this project already exists; you’ll use this existing
 application by copying it into your AT&T Flow workspace and modifying it to suit
-your account’s configuration and ISK hardware. Each AT&T account has unique
+your account’s configuration and IoT SK hardware. Each AT&T account has unique
 account keys that the Flow application needs to operate, so you’ll be copying
 them into the existing application project so it can work within your AT&T IoT
 Services account.
@@ -537,7 +544,7 @@ the different M2X streams that have been created for it.
 _Figure 31 – Automatically Registered Virtual Device in M2X_
 
 <p id="user-content-menu17"></p>
-#### DEPLOYING THE PROJECT FIRMWARE TO THE DEVELOPMENT BOARD
+#### DEPLOYING THE PROJECT SOFTWARE TO THE DEVELOPMENT BOARD
 
 At this point, you’re ready to deploy the data collection app to the development
 board. The NXP FRDM-K64F SBC runs the ARM mBed operating system. ARM
@@ -592,18 +599,18 @@ view version information.
 <p id="user-content-menu19"></p>
 ### Software Modification
 
-Like what you did for the Flow application, you must copy the base firmware
-project in order to customize it for your AT&T IoT Services environment.
+Like what you did for the Flow application, you must copy the base software project in order to customize it for your AT&T IoT Services environment.
 
-1\. Open a new browser window then navigate to [https://developer.mbed.org/
-users/JMF/code/Avnet_ATT_Cellular_IOT](https://developer.mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT "developer.mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT"). On the page that appears, click
+1\. Open a new browser tab, then navigate to [https://developer.mbed.org/platforms/FRDM-K64F/](https://developer.mbed.org/platforms/FRDM-K64F/) and import this platform into your compiler.  You'll need to create an account if you haven't already.
+
+2\. View the Cellular IoT sample project:  [https://developer.mbed.org/teams/Avnet/code/Avnet_ATT_Cellular_IOT/](https://developer.mbed.org/teams/Avnet/code/Avnet_ATT_Cellular_IOT/). On the page click
 the Import into Compiler button highlighted in Figure 33. The development
 environment will open start the import process.
 
-![Figure 33 – ARM mbed Firmware Project Page](../images/starter-kit-guide/QuickStart38.png)  
-_Figure 33 – ARM mbed Firmware Project Page_
+![Figure 33 – ARM mbed Software Project Page](../images/starter-kit-guide/QuickStart38.png)  
+_Figure 33 – ARM mbed Software Project Page_
 
-2\. During the import process, you will be prompted to update settings that
+3\. During the import process, you will be prompted to update settings that
 control the import process (Figure 34); accept the default settings then click
 the Import button, optionally changing the project name during the process if
 you wish.
@@ -614,7 +621,7 @@ _Figure 34 – mbed IDE Import Dialog_
 ![Figure 35 – mbed IDE](../images/starter-kit-guide/QuickStart40.png)  
 _Figure 35 – mbed IDE_
 
-3\. Before you can compile the software, you’ll have to change some constants
+4\. Before you can compile the software, you’ll have to change some constants
 defined within the application to match your project configuration. In the mbed
 IDE Program Workspace window shown on the left side of Figure 35, click the
 config_me.h file to open it in the editor. With the file open in the editor, look for
@@ -688,9 +695,9 @@ you’ll need the file later.
 4\. Disconnect the development board from your computer, wait a few seconds,
 then reconnect. Once the development board boots and your computer
 recognizes it as a drive, drag the compiled binary you just downloaded onto the
-drive (the disk drive representing the development board). This will program
+drive (the dIoT SK drive representing the development board). This will program
 the non-volatile flash memory on the development board with the updated
-application firmware. Programming should take about 10 seconds, during which
+application software. Programming should take about 10 seconds, during which
 time the board’s green LED will flash repeatedly.
 
 5\. Disconnect the development board from the computer and remove the 5V
@@ -718,7 +725,7 @@ we all know that nothing ever works as expected the first time, so there’s
 probably the need to be able to see what’s happening on the development
 board. Unfortunately, the board doesn’t offer a video connection, so there’s
 no way to plugin in a monitor and watch the code at work. On the other hand,
-the application firmware writes to the console, so you can remotely monitor
+the application software writes to the console, so you can remotely monitor
 the console to view program output. Your desktop or laptop computer will
 communicate with the development board through its serial port. Windows,
 Macintosh and Linux computers are supported.
@@ -750,7 +757,7 @@ Default terminal configuration settings should be:
 * Flow Control = none
 * COM port set appropriately (Figure 38)
 
-With everything installed and operating, you should be able to see the firmware
+With everything installed and operating, you should be able to see the software
 application’s output in the terminal window as shown in Figure 39. In this
 example, the development board has just powered up and it is initializing the
 cellular shield.
@@ -787,11 +794,11 @@ debug console.
 _Figure 42 – AT&T M2X Graphing Sensor Data_
 
 <p id="user-content-menu21"></p>
-### THE IMPATIENT DEVELOPER’S GUIDE TO CREATING THE FLOW APPLICATION
+### EXPANDED GUIDE
 
 The AT&T Flow application for this project already exists; you’ll use this existing
 application by copying it into your AT&T Flow workspace and modifying it to suit
-your account’s configuration and ISK hardware. Each AT&T account has unique
+your account’s configuration and IoT SK hardware. Each AT&T account has unique
 account keys that the Flow application needs to operate, so you’ll be copying
 them into the existing application project so it can work within your AT&T IoT
 Services account.
@@ -893,7 +900,7 @@ list. If you expand it by clicking the + sign to its left, you will see the diff
 streams that have been created for it.
 
 <p id="user-content-menu24"></p>
-#### DEPLOYING THE PROJECT FIRMWARE TO THE DEVELOPMENT BOARD
+#### DEPLOYING THE PROJECT SOFTWARE TO THE DEVELOPMENT BOARD
 
 At this point, you’re ready to deploy the data collection app to the development
 board. The NXP FRDM-K64F SBC runs the ARM mBed operating system. ARM
@@ -941,8 +948,7 @@ Like what you did for the Flow application, you must copy the base
 firmware project in order to customize it for your AT&T IoT Services
 environment.
 
-1\. Open a new browser window then navigate to [https://developer.
-mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT](https://developer.mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT "developer.mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT"). On the page
+1\. Open a new browser window, then navigate to [https://developer.mbed.org/teams/Avnet/code/Avnet_ATT_Cellular_IOT/](https://developer.mbed.org/teams/Avnet/code/Avnet_ATT_Cellular_IOT/). On the page
 that appears, click the Import into Compiler button. The development
 environment will open start the import process.
 
@@ -1024,7 +1030,7 @@ you’ll need the file later.
 4\. Disconnect the development board from your computer, wait a few seconds,
 then reconnect. Once the development board boots and your computer
 recognizes it as a drive, drag the compiled binary you just downloaded onto the
-drive (the disk drive representing the development board). This will program
+drive (the dIoT SK drive representing the development board). This will program
 the non-volatile flash memory on the development board with the updated
 application firmware. Programming should take about 10 seconds, during which
 time the board’s green LED will flash repeatedly.

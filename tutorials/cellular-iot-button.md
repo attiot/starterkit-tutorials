@@ -9,13 +9,13 @@
 
 ### Intro
 
-A simple use case to demonstrate using the built-in buttons on the Freedom K64F board which comes with the AT&T IoT Starter Kit.  Both SW buttons on the board result in calls to AT&T Flow which then sends a message.  The default case uses Twillio to send an SMS.
+A simple use case to demonstrate using the built-in buttons on the Freedom K64F board which comes with the AT&T IoT Starter Kit.  Both SW buttons on the board result in calls to AT&T Flow which then sends a message.  The default case uses Twilio to send an SMS.
 
 ### Steps
 
 1. If you haven't already, set up an account on the [Starter Kit Portal](https://starterkit.att.com/app) and register your SIM card.  Make sure that its status is "Activated".
 2. Log into [AT&T Flow](https://flow.att.io/).  If you want to learn more about Flow, check out its [Get Started](https://flow.att.com/start) page.
-3. Fork the [Buttons reference project](https://flow.att.io/starter-kit-core/starter-kit-buttons/home) using the ![alt text](../images/cellular-iot-button/Fork.jpg "Fork") button.  (Optional: Create a Twillio account to receive SMS messages and configure the Twillio node in this flow)
+3. Fork the [Buttons reference project](https://flow.att.io/starter-kit-core/starter-kit-buttons/home) using the ![alt text](../images/cellular-iot-button/Fork.jpg "Fork") button.  (Optional: Create a Twilio account to receive SMS messages and configure the Twilio node in this flow)
 4. Deploy it to set the endpoints using the ![alt text](../images/cellular-iot-button/Deploy.jpg "Deploy") button.
 5. Open the Endpoints tab and you'll see something like this:
 <br/>![alt text](../images/cellular-iot-button/ButtonsFlow.jpg "Buttons Flow")
@@ -32,29 +32,55 @@ A simple use case to demonstrate using the built-in buttons on the Freedom K64F 
 <br/>![alt text](../images/cellular-iot-button/KitButtons.jpg "Kit Buttons")
 13. Once its up and talking you can click on the SW2 or SW3 buttons (they come through to Flow as Button 1 and Button 2, respectively).  You'll see this in the Debug panel of the Flow.
 
+In a serial terminal you should see results like this:
+<br/>![alt text](../images/cellular-iot-button/CoolTermResults.jpg "Results")
+```
+Send: <<AT@SOCKCONN=1,"52.33.231.251",33865,30>>
+[AT@SOCKCONN=1,"52.33.231.251",33865,30OK]
+SW2 Button
+Sending to modem : serial:starterkit001 button1:1 button2:0
+Send: <<AT+CSQ>>
+[AT+CSQ+CSQ: 13,0OK]
+Send: <<AT+CPIN?>>
+[AT+CPIN?+CPIN: READYOK]
+...
+Send: <<AT@SOCKREAD=1,1024>>
+[AT@SOCKREAD=1,1024@SOCKREAD:0,""OK]
+Read back : received.
+```
+
 Now you're up and running!  You can modify the flow to add functionality like calling out to other web services.
 
 ### Explanation
 
-**AT&T Flow**
-<br/>
+#### AT&T Flow
+
 ![alt text](../images/cellular-iot-button/ButtonsFlow.jpg "Buttons Flow")
 <br/>In Flow, data *flows* left to right.  The inputs are on the far left and the outputs on the far right.  In between are various nodes used to normalize data, perform calculations, or implement business rules.  Each node passes along its output using the *msg* object and the *msg.payload* property.
 
 This flow has two inputs: a HTTP-In node or a TCP-In node.  Either can be used and lead to the same result, as you can see where the sequences merge into one.  The HTTP-In simply expects a GET sent to {Base_URL}/buttons along with a query string containing button1 and button2.  The TCP node expects a string (text) and will treat each line as a separate string.  It passes along a payload of the query string as an object to the *Parse Input* function node, which expects name:value pairs separated by a space (i.e. "serial:starterkit001 button1:1 button2:0").
 
-The function middle nodes affect the payload in various ways in order to communicate the button states.  The *Twillio* node is configured with a particular account to send an SMS to a particular phone number.
+The function middle nodes affect the payload in various ways in order to communicate the button states.  The *Twilio* node is configured with a particular account to send an SMS to a particular phone number.  You could also send an email using the Email output node, post to Twitter, IRC, or send to another web service.
 
 The output nodes correspond with whatever input method was used.  For every request, a response must be issued back to the device so it knows the request was completed and successful in sending data.
 
-**ARM mbed C code**
-<br/>The main components of this code are: 1. using interrupts to run code when the buttons are pressed and 2. send the data to Flow, both in main.cpp.  It uses the base code written by Avnet for the [Avnet_ATT_Cullular_IOT Quick Start program](https://developer.mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT/), which in turn is taking care of the AT commands sent to the modem for you.
+#### ARM mbed C code
+
+The main components of this code are: 
+
+1. using interrupts to run code when the buttons are pressed, and
+2. send the data to Flow, both in main.cpp.  
+
+It uses the base code written by Avnet for the [Avnet_ATT_Cellular_IOT Quick Start program](https://developer.mbed.org/users/JMF/code/Avnet_ATT_Cellular_IOT/), which in turn is taking care of the AT commands sent to the modem for you.
 
 ```
 // interrupts for buttons
 InterruptIn sw2(SW2);
 
 // SW2 event-triggered interrupt
+// ISR = interrupt service routine
+// down = button was pushed down/falling
+// up = button was released/rising
 void sw2_isr_down()
 {
     g_sw2_flag = 1;   // set flag in ISR
@@ -65,7 +91,7 @@ void sw2_isr_up()
     g_sw2_flag = 0;
 }
 ```
-Then, the in the main() function, set up what happens when the button is pressed - namely, calling the event handler we defined previously:
+Then, in the main() function, set up what happens when the button is pressed - namely, calling the event handler we defined previously:
 ```
 sw2.fall(&sw2_isr_down);
 sw2.rise(&sw2_isr_up);
@@ -112,6 +138,6 @@ If you're having trouble it may help you to connect to the serial output.  Use a
 <br/>![alt text](../images/cellular-iot-button/CoolTerm.jpg "CoolTerm")
 * [PC USB serial driver](https://developer.mbed.org/handbook/Windows-serial-configuration)
 
-Make sure to check your flow endpoints for the correct server name and port.  Most people forget to change the server name.  Also make sure the URL components are defined in the correct variables and not combined into one. Check that your Flow is deployed and not in *Offline* mode.
+Make sure to check your Flow endpoints for the correct server name and port.  Most people forget to change the server name.  Also make sure the URL components are defined in the correct variables and not combined into one. Check that your Flow is deployed and not in *Offline* mode.
 
 The modem module requires a lot of power.  The USB plug included with the kit provides ***5V-2.4A*** and you need at least that much.  If you're seeing ```modem initialization failure``` the modem is probably not getting enough power.

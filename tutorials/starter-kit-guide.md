@@ -695,7 +695,7 @@ you’ll need the file later.
 4\. Disconnect the development board from your computer, wait a few seconds,
 then reconnect. Once the development board boots and your computer
 recognizes it as a drive, drag the compiled binary you just downloaded onto the
-drive (the dIoT SK drive representing the development board). This will program
+drive (the disk drive representing the development board). This will program
 the non-volatile flash memory on the development board with the updated
 application software. Programming should take about 10 seconds, during which
 time the board’s green LED will flash repeatedly.
@@ -1030,7 +1030,7 @@ you’ll need the file later.
 4\. Disconnect the development board from your computer, wait a few seconds,
 then reconnect. Once the development board boots and your computer
 recognizes it as a drive, drag the compiled binary you just downloaded onto the
-drive (the dIoT SK drive representing the development board). This will program
+drive (the disk drive representing the development board). This will program
 the non-volatile flash memory on the development board with the updated
 application firmware. Programming should take about 10 seconds, during which
 time the board’s green LED will flash repeatedly.

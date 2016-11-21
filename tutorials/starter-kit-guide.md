@@ -19,7 +19,7 @@
      * [SIM Card Registration](#user-content-menu9 "SIM Card Registration")
      * [ARM mbed.org Account](#user-content-menu10 "ARM mbed.org Account")
      * [Optional: Cloudconnectkits.org Account](#user-content-menu11 "Optional: Cloudconnectkits.org Account")
-  * [The Expanded Guide ](#user-content-menu12 "The Expanded Guide")
+  * [The Expanded Guide to Creating the Flow Application](#user-content-menu12 "The Expanded Guide")
   	 * [Accessing The Flow Dashboard](#user-content-menu13 "Accessing The Flow Dashboard")
   	 * [Forking the Existing Project](#user-content-menu14 "Forking the Existing Project")
   	 * [Configure the Flow Application to Access Your M2X Account](#user-content-menu15 "Configure the Flow Application to Access Your M2X Account")
@@ -792,7 +792,7 @@ debug console.
 _Figure 42 – AT&T M2X Graphing Sensor Data_
 
 <p id="user-content-menu21"></p>
-### EXPANDED GUIDE
+### QUICK GUIDE TO CREATING THE FLOW APPLICATION
 
 The AT&T Flow application for this project already exists; you’ll use this existing
 application by copying it into your AT&T Flow workspace and modifying it to suit

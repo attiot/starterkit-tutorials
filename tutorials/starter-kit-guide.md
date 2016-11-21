@@ -28,7 +28,7 @@
      * [Hardware Setup](#user-content-menu18 "Hardware Setup")
      * [Software Modification](#user-content-menu19 "Software Modification")
      * [Monitoring Activity](#user-content-menu20 "Monitoring Activity")
-  * [The Impatient Developer’s Guide to Creating the Flow Application](#user-content-menu21 "The Impatient Developer’s Guide to Creating the Flow Application")
+  * [Quick Guide to Creating the Flow Application](#user-content-menu21 "Quick Guide to Creating the Flow Application")
      * [Flow & M2X Configuration](#user-content-menu22 "Flow & M2X Configuration")
      * [Executing the M2X Setup Flow](#user-content-menu23 "Executing the M2X Setup Flow")
      * [Deploying the Project Software to the Development Board](#user-content-menu24 "Deploying the Project Software to the Development Board")
@@ -192,10 +192,8 @@ some time reviewing ‘IoT Project Approaches with Flow and M2X’ before
 continuing. You’ll need to use a few online accounts to complete this project, so
 you’ll find registration instructions in the ‘Account Setup’ section.
 Regarding creating the project; if you’re the impatient type, and don’t need
-any hand holding, you’ll find shortcut instructions for this project in ‘The
-Impatient Developer’s Guide to Creating the Flow Application.’ For beginners,
-complete, step by step instructions, with pictures, can be found in ‘The Patient
-Developer’s Guide to Creating the Flow Application.’
+any hand holding, you’ll find shortcut instructions for this project in ‘Quick Guide to Creating the Flow Application.’ For beginners,
+complete, step by step instructions, with pictures, can be found in ‘The Expanded Guide to Creating the Flow Application.’
 
 <p id="user-content-menu6"></p>
 ### IOT PROJECT APPROACHES WITH FLOW AND M2X
@@ -353,7 +351,7 @@ _Figure 15 – cloudconnectkits.org Registration_
 _Figure 16 – IoT SK Serial Kit Number_
 
 <p id="user-content-menu12"></p>
-### THE PATIENT DEVELOPER’S GUIDE TO CREATING THE FLOW APPLICATION
+### THE EXPANDED GUIDE TO CREATING THE FLOW APPLICATION
 
 The AT&T Flow application for this project already exists; you’ll use this existing
 application by copying it into your AT&T Flow workspace and modifying it to suit

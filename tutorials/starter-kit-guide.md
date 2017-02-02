@@ -287,8 +287,7 @@ app/sim-cards](http://starterkit.att.com/app/sim-cards  "starterkit.att.com/app/
 use the AT&T account you created in the previous step to login to this site.
 
 Once you’re logged in, you’ll be taken to the AT&T IoT Starter Kit Dashboard
-(Figure 12). The SIM page should open automatically, if not, click the SIM Cards
-tab on the left side of the page. From there, click the plus sign icon to add a SIM
+(Figure 12). From there, click on the Activate SIM link under the SIM Cards menu section to add a SIM 
 card to your account.
 
 ![Figure 11 – AT&T IoT Starter Kit Home Page](../images/starter-kit-guide/QuickStart16.png)  

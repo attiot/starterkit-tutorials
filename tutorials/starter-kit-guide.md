@@ -672,7 +672,7 @@ To determine the value for FLOW_DEVICE_NAME, open the M2X browser
 window and click on the device that the Flow application created earlier then
 copy the Device Serial number highlighted in Figure 37.
 
-![Figure 37 – AT&T M2X Starter Kit Device Page](../images/starter-kit-guide/QuickStart41.png)  
+![Figure 37 – AT&T M2X Starter Kit Device Page](../images/starter-kit-guide/QuickStart42.png)  
 _Figure 37 – AT&T M2X Starter Kit Device Page_
 
 Based on the example provided above, the configuration values should look
@@ -681,7 +681,7 @@ something like the following, but using values from your project configuration:
 ```
 static const char * MY_SERVER_URL = “run-east.att.io”;  
 \#define FLOW_BASE_URL “/123456789/112233445566778899/in/flow”  
-\#define FLOW_DEVICE_NAME “some_device_id”
+\#define FLOW_DEVICE_NAME “starterkit001”
 ```
 
 In the mbed IDE, click the Save button along the top toolbar. Next, click the

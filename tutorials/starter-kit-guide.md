@@ -598,7 +598,7 @@ view version information.
 
 Like what you did for the Flow application, you must copy the base software project in order to customize it for your AT&T IoT Services environment.
 
-1\. Open a new browser tab, then navigate to [https://developer.mbed.org/platforms/FRDM-K64F/](https://developer.mbed.org/platforms/FRDM-K64F/) and import this platform into your compiler.  You'll need to create an account if you haven't already.
+1\. Open a new browser tab, then navigate to [https://developer.mbed.org/platforms/FRDM-K64F/](https://developer.mbed.org/platforms/FRDM-K64F/) and import this platform into your compiler by clicking "Add to your mbed Compiler" on the right side of the page.  You'll need to create an account if you haven't already.
 
 2\. View the Cellular IoT sample project:  [https://developer.mbed.org/teams/Avnet/code/Avnet_ATT_Cellular_IOT/](https://developer.mbed.org/teams/Avnet/code/Avnet_ATT_Cellular_IOT/). On the page click
 the Import into Compiler button highlighted in Figure 33. The development

@@ -54,7 +54,7 @@ To upgrade the firmware on the WNC Cellular Shield, perform the following steps:
 
 	After the drivers are loaded and WNC Shield connected, leave it connected and powered up while attached to the PC.
 
-7.	[Download the WNC Connection Manager (WNCCM) software (WNCCM_1.0.1.msi)](https://s3-us-west-2.amazonaws.com/starterkit-assets/WNCCM_1.0.1.msi).  Double-click the downloaded file to begin the installation.  When the connection manager install completes, the PC will create a network adapter for the WNC Shield Board.
+7.	[Download the WNC Connection Manager (WNCCM) software (WNCCM_1.0.5.msi)](https://s3-us-west-2.amazonaws.com/starterkit-assets/WNCCM_1.0.5.msi).  Double-click the downloaded file to begin the installation.  When the connection manager install completes, the PC will create a network adapter for the WNC Shield Board.
 
 	> **Note:** Do not perform this installation while the WNC Cellular Shield is connected to the FRDM-K64F development board, as the update might fail.
 
